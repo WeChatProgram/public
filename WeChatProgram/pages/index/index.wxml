@@ -1,10 +1,35 @@
+
+
 <!--index.wxml-->
 <view class="container">
   <view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
+
+  <!-- This is our View -->
+  <view> 您好 {{name}}! </view>
+  <button bindtap="changeName">点击 Click! </button>
+
+
+  <view class="body-view">
+      <switch checked bindchange="switch1Change"/>
+      <switch bindchange="switch2Change"/>
+  </view>
+
+
+
+
+
+
+
+
+
+
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+
+
+

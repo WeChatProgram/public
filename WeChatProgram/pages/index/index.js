@@ -1,11 +1,42 @@
 //index.js
 //获取应用实例
 var app = getApp()
+
+
+
+// Register a Page.
 Page({
+
   data: {
-    motto: 'Hello World',
-    userInfo: {}
+    name: '小程序',
+    motto: 'version1.0.0',
+    userInfo: {},
   },
+  changeName: function(e) {
+    // sent data change to view
+    this.setData({
+      name: '微信小程序'
+    })
+  },
+
+
+
+
+
+  switch1Change: function (e){
+    console.log('switch1 发生 change 事件，携带值为', e.detail.value)
+  },
+  switch2Change: function (e){
+    console.log('switch2 发生 change 事件，携带值为', e.detail.value)
+  },
+
+
+
+
+
+
+
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -24,3 +55,9 @@ Page({
     })
   }
 })
+
+
+
+
+
+
